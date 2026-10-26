@@ -1,0 +1,17 @@
+target/
+worlds/
+docs/
+perf/
+test/
+.git/
+.github/
+.idea/
+.vscode/
+*.iml
+*.md
+graphics.properties
+.env
+.env.*
+docker-compose*.yml
+Dockerfile
+.dockerignore

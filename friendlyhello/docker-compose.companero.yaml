@@ -1,0 +1,20 @@
+# Parte 3, ejercicio 2: la misma aplicación usando la imagen publicada por un compañero.
+# Uso: COMPANERO_IMAGE=<usuario-del-companero>/friendlyhello:0.1.0 docker compose -f docker-compose.companero.yaml up -d
+services:
+  web:
+    image: ${COMPANERO_IMAGE:?Defina COMPANERO_IMAGE con la imagen del compañero, p. ej. usuario/friendlyhello:0.1.0}
+    ports:
+      - "4000:8000"
+    depends_on:
+      redis:
+        condition: service_healthy
+  redis:
+    image: redis:8.8
+    command: redis-server --appendonly yes
+    volumes:
+      - ./data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5

@@ -1,5 +1,21 @@
 # Taller de Docker
 
+> ## Entrega
+>
+> **Integrante:** Ethian White · ethianwhor@unisabana.edu.co (ver [`integrantes.txt`](integrantes.txt))
+> **Documentación y evidencias:** en el **Wiki** de este repositorio.
+>
+> | Carpeta | Contenido |
+> |---------|-----------|
+> | [`hello-world/`](hello-world) | Paso 1: primer Dockerfile. |
+> | [`friendlyhello/`](friendlyhello) | Pasos 2 a 6: aplicación Flask + Redis, Compose, Traefik con 5 réplicas y ejercicios de la Parte 3 (`docker-compose.hub.yaml`, `docker-compose.companero.yaml`). `Dockerfile.orden-invertido` es la variante de la pregunta de discusión del Paso 4. |
+> | [`proyecto-mc2/`](proyecto-mc2) | Parte 4: Dockerfile *multi-stage*, `.dockerignore` y Compose para el proyecto del equipo, [Minecraft 2](https://github.com/MarshallGomez1103/Mc2). |
+> | [`evidencias/`](evidencias) | Script que ejecuta los Pasos 1 a 6 y guarda las salidas de los comandos. |
+>
+> La guía original del taller sigue a continuación.
+
+---
+
 Este taller tiene como objetivo aprender a **crear imágenes propias, ejecutar contenedores y componer aplicaciones de varios servicios** con Docker y Docker Compose.
 Se parte de una aplicación web sencilla en Python con una base de datos Redis, se escala detrás de un balanceador de carga y, al final, se aplica lo aprendido a una aplicación **Java / Spring Boot** como la del proyecto del curso.
 

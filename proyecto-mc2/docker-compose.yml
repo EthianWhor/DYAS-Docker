@@ -1,0 +1,18 @@
+# Minecraft 2 en un contenedor. Va en la carpeta Minecraft2/ del proyecto, junto al Dockerfile.
+# El menú de consola es interactivo, así que se usa "run" en lugar de "up":
+#   docker compose run --rm mc2
+name: mc2
+
+services:
+  mc2:
+    build: .
+    image: mc2:dev
+    # Entrada y terminal para el menú de consola
+    stdin_open: true
+    tty: true
+    volumes:
+      - mundos:/data/worlds
+
+# Los mundos sobreviven a "docker compose down"; "docker compose down -v" los borra
+volumes:
+  mundos:

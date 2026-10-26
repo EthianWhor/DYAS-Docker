@@ -1,0 +1,4 @@
+# Fin de línea LF para que los scripts y Dockerfiles funcionen igual dentro de los contenedores Linux
+* text=auto eol=lf
+*.png binary
+*.jpg binary

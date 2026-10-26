@@ -1,0 +1,24 @@
+# Datos de Redis que crea Docker Compose (Pasos 5 y 6)
+data/
+
+# Variables locales con claves: se sube solo .env.example
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+# Maven
+target/
+
+# Mundos de Minecraft 2 guardados al probar fuera del contenedor
+worlds/
+
+# Borradores locales del wiki (el wiki es un repositorio aparte)
+wiki/
+
+# Sistema operativo y editores
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
