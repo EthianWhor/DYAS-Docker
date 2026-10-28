@@ -1,0 +1,98 @@
+$ docker run --rm -i -v mc2-mundos:/data/worlds mc2:dev   # crear mundo "mundo-docker" y listar
+
+========================================
+  Minecraft 2
+========================================
+No hay ningún mundo cargado.
+
+1. Crear mundo
+2. Listar mundos
+3. Cargar mundo
+4. Guardar mundo actual
+5. Eliminar mundo
+6. Jugar
+7. Texturas: ACTIVADAS (cambiar)
+8. Enemigos: ON · Texturas enemigos: ON · Dificultad: NORMAL (configurar)
+0. Salir
+Seleccione una opción: 
+========================================
+  Crear mundo
+========================================
+Nombre del mundo: Tamaño: 1. Pequeño (2x2) · 2. Mediano (10x10) · 3. Grande (16x16)
+Elija tamaño [1 por defecto]: Mundo creado y cargado: mundo-docker (Pequeño, 4 chunks)
+
+========================================
+  Minecraft 2
+========================================
+Mundo cargado: mundo-docker
+
+1. Crear mundo
+2. Listar mundos
+3. Cargar mundo
+4. Guardar mundo actual
+5. Eliminar mundo
+6. Jugar
+7. Texturas: ACTIVADAS (cambiar)
+8. Enemigos: ON · Texturas enemigos: ON · Dificultad: NORMAL (configurar)
+0. Salir
+Seleccione una opción: 
+========================================
+  Mundos guardados
+========================================
+  - mundo-docker
+Total: 1
+
+========================================
+  Minecraft 2
+========================================
+Mundo cargado: mundo-docker
+
+1. Crear mundo
+2. Listar mundos
+3. Cargar mundo
+4. Guardar mundo actual
+5. Eliminar mundo
+6. Jugar
+7. Texturas: ACTIVADAS (cambiar)
+8. Enemigos: ON · Texturas enemigos: ON · Dificultad: NORMAL (configurar)
+0. Salir
+Seleccione una opción: Hasta luego.
+
+$ docker run --rm -i -v mc2-mundos:/data/worlds mc2:dev   # contenedor nuevo: el mundo sigue en el volumen
+
+========================================
+  Minecraft 2
+========================================
+No hay ningún mundo cargado.
+
+1. Crear mundo
+2. Listar mundos
+3. Cargar mundo
+4. Guardar mundo actual
+5. Eliminar mundo
+6. Jugar
+7. Texturas: ACTIVADAS (cambiar)
+8. Enemigos: ON · Texturas enemigos: ON · Dificultad: NORMAL (configurar)
+0. Salir
+Seleccione una opción: 
+========================================
+  Mundos guardados
+========================================
+  - mundo-docker
+Total: 1
+
+========================================
+  Minecraft 2
+========================================
+No hay ningún mundo cargado.
+
+1. Crear mundo
+2. Listar mundos
+3. Cargar mundo
+4. Guardar mundo actual
+5. Eliminar mundo
+6. Jugar
+7. Texturas: ACTIVADAS (cambiar)
+8. Enemigos: ON · Texturas enemigos: ON · Dificultad: NORMAL (configurar)
+0. Salir
+Seleccione una opción: Hasta luego.

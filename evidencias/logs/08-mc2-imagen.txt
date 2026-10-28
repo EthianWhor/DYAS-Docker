@@ -1,0 +1,15 @@
+$ docker images mc2
+IMAGE     ID             DISK USAGE   CONTENT SIZE   EXTRA
+mc2:dev   1ec9e868652b        406MB          110MB        
+
+$ docker run --rm --entrypoint id mc2:dev
+uid=999(app) gid=999(app) groups=999(app)
+
+$ docker run --rm --entrypoint java mc2:dev -version
+openjdk version "17.0.20.1" 2026-08-18
+OpenJDK Runtime Environment Temurin-17.0.20.1+1 (build 17.0.20.1+1)
+OpenJDK 64-Bit Server VM Temurin-17.0.20.1+1 (build 17.0.20.1+1, mixed mode, sharing)
+
+$ docker run --rm --entrypoint sh mc2:dev -c "command -v mvn javac || echo sin Maven ni javac"
+sin Maven ni javac
+

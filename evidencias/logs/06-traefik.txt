@@ -1,0 +1,150 @@
+$ docker compose -f docker-compose.traefik.yaml up -d --build --scale web=5 --wait
+ Image friendlyhello-web Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 593B 0.1s done
+#1 DONE 0.1s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 1.01kB 0.0s done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.14-slim
+#3 DONE 0.4s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 134B done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 DONE 0.0s
+
+#6 [1/6] FROM docker.io/library/python:3.14-slim@sha256:82abc9f53600280b0757126f83c5a7d47088592d2acb6b4c0b9e97f76865508c
+#6 resolve docker.io/library/python:3.14-slim@sha256:82abc9f53600280b0757126f83c5a7d47088592d2acb6b4c0b9e97f76865508c 0.1s done
+#6 DONE 0.1s
+
+#5 [internal] load build context
+#5 transferring context: 63B done
+#5 DONE 0.0s
+
+#7 [2/6] WORKDIR /app
+#7 CACHED
+
+#8 [3/6] COPY requirements.txt .
+#8 CACHED
+
+#9 [4/6] RUN pip install --no-cache-dir -r requirements.txt
+#9 CACHED
+
+#10 [5/6] COPY . .
+#10 CACHED
+
+#11 [6/6] RUN useradd --system --no-create-home app
+#11 CACHED
+
+#12 exporting to image
+#12 exporting layers done
+#12 exporting manifest sha256:714c2de49e39662ae6e871662eb2c5fd48c05978c176235fa81fbfc46871983a done
+#12 exporting config sha256:b3fcde899fd3b7097a5d2f036181afce6e0e27ec45c65c8bb0085aed8836d853 0.0s done
+#12 exporting attestation manifest sha256:6064145867b45b9a31182a5dbc8981e06b3ee030fdf1e7ffc194ebaa8540afc1
+#12 exporting attestation manifest sha256:6064145867b45b9a31182a5dbc8981e06b3ee030fdf1e7ffc194ebaa8540afc1 0.1s done
+#12 exporting manifest list sha256:aa146e7142233fe649a3268840a469f3f12f5a9637bbb6b264bffd03a382aa56 0.1s done
+#12 naming to docker.io/library/friendlyhello-web:latest
+#12 naming to docker.io/library/friendlyhello-web:latest done
+#12 unpacking to docker.io/library/friendlyhello-web:latest 0.0s done
+#12 DONE 0.3s
+
+#13 resolving provenance for metadata file
+#13 DONE 0.2s
+ Image friendlyhello-web Built 
+ Network friendlyhello_default Creating 
+ Network friendlyhello_default Creating 
+ Network friendlyhello_default Created 
+ Network friendlyhello_default Created 
+ Container friendlyhello-redis-1 Creating 
+ Container friendlyhello-traefik-1 Creating 
+ Container friendlyhello-traefik-1 Created 
+ Container friendlyhello-redis-1 Created 
+ Container friendlyhello-web-1 Creating 
+ Container friendlyhello-web-2 Creating 
+ Container friendlyhello-web-3 Creating 
+ Container friendlyhello-web-5 Creating 
+ Container friendlyhello-web-4 Creating 
+ Container friendlyhello-web-1 Created 
+ Container friendlyhello-web-2 Created 
+ Container friendlyhello-web-3 Created 
+ Container friendlyhello-web-5 Created 
+ Container friendlyhello-web-4 Created 
+ Container friendlyhello-redis-1 Starting 
+ Container friendlyhello-traefik-1 Starting 
+ Container friendlyhello-redis-1 Started 
+ Container friendlyhello-redis-1 Waiting 
+ Container friendlyhello-traefik-1 Started 
+ Container friendlyhello-redis-1 Healthy 
+ Container friendlyhello-web-4 Starting 
+ Container friendlyhello-web-4 Started 
+ Container friendlyhello-web-5 Starting 
+ Container friendlyhello-web-5 Started 
+ Container friendlyhello-web-3 Starting 
+ Container friendlyhello-web-3 Started 
+ Container friendlyhello-web-1 Starting 
+ Container friendlyhello-web-1 Started 
+ Container friendlyhello-web-2 Starting 
+ Container friendlyhello-web-2 Started 
+ Container friendlyhello-web-4 Waiting 
+ Container friendlyhello-web-5 Waiting 
+ Container friendlyhello-web-3 Waiting 
+ Container friendlyhello-web-1 Waiting 
+ Container friendlyhello-web-2 Waiting 
+ Container friendlyhello-redis-1 Waiting 
+ Container friendlyhello-traefik-1 Waiting 
+ Container friendlyhello-redis-1 Healthy 
+ Container friendlyhello-traefik-1 Healthy 
+ Container friendlyhello-web-4 Healthy 
+ Container friendlyhello-web-5 Healthy 
+ Container friendlyhello-web-3 Healthy 
+ Container friendlyhello-web-1 Healthy 
+ Container friendlyhello-web-2 Healthy 
+
+hostname=a11db8186107  visits=56
+hostname=997c8361e9b9  visits=57
+hostname=87e1b94ca3ea  visits=58
+hostname=0abe55fe7cd2  visits=59
+hostname=daac63e4baad  visits=60
+hostname=0abe55fe7cd2  visits=61
+hostname=daac63e4baad  visits=62
+hostname=997c8361e9b9  visits=63
+hostname=a11db8186107  visits=64
+hostname=87e1b94ca3ea  visits=65
+hostname=a11db8186107  visits=66
+hostname=87e1b94ca3ea  visits=67
+hostname=daac63e4baad  visits=68
+hostname=0abe55fe7cd2  visits=69
+hostname=997c8361e9b9  visits=70
+
+Hostnames distintos:
+0abe55fe7cd2
+87e1b94ca3ea
+997c8361e9b9
+a11db8186107
+daac63e4baad
+$ docker compose -f docker-compose.traefik.yaml ps
+NAME                      IMAGE               COMMAND                  SERVICE   CREATED          STATUS                    PORTS
+friendlyhello-redis-1     redis:8.8           "docker-entrypoint.s…"   redis     26 seconds ago   Up 24 seconds (healthy)   6379/tcp
+friendlyhello-traefik-1   traefik:v3.7        "/entrypoint.sh --ap…"   traefik   26 seconds ago   Up 23 seconds             0.0.0.0:4000->4000/tcp, [::]:4000->4000/tcp, 0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp
+friendlyhello-web-1       friendlyhello-web   "gunicorn --bind 0.0…"   web       25 seconds ago   Up 14 seconds (healthy)   8000/tcp
+friendlyhello-web-2       friendlyhello-web   "gunicorn --bind 0.0…"   web       25 seconds ago   Up 14 seconds (healthy)   8000/tcp
+friendlyhello-web-3       friendlyhello-web   "gunicorn --bind 0.0…"   web       25 seconds ago   Up 15 seconds (healthy)   8000/tcp
+friendlyhello-web-4       friendlyhello-web   "gunicorn --bind 0.0…"   web       25 seconds ago   Up 18 seconds (healthy)   8000/tcp
+friendlyhello-web-5       friendlyhello-web   "gunicorn --bind 0.0…"   web       25 seconds ago   Up 16 seconds (healthy)   8000/tcp
+
+$ docker ps --filter label=com.docker.compose.service=web
+CONTAINER ID   IMAGE               COMMAND                  CREATED          STATUS                    PORTS      NAMES
+daac63e4baad   friendlyhello-web   "gunicorn --bind 0.0…"   26 seconds ago   Up 18 seconds (healthy)   8000/tcp   friendlyhello-web-4
+997c8361e9b9   friendlyhello-web   "gunicorn --bind 0.0…"   26 seconds ago   Up 17 seconds (healthy)   8000/tcp   friendlyhello-web-5
+87e1b94ca3ea   friendlyhello-web   "gunicorn --bind 0.0…"   26 seconds ago   Up 16 seconds (healthy)   8000/tcp   friendlyhello-web-3
+0abe55fe7cd2   friendlyhello-web   "gunicorn --bind 0.0…"   26 seconds ago   Up 15 seconds (healthy)   8000/tcp   friendlyhello-web-1
+a11db8186107   friendlyhello-web   "gunicorn --bind 0.0…"   26 seconds ago   Up 14 seconds (healthy)   8000/tcp   friendlyhello-web-2
+
+$ curl -s http://localhost:8080/api/http/services
+[{"status":"enabled","usedBy":["api@internal"],"name":"api@internal","provider":"internal"},{"status":"enabled","usedBy":["dashboard@internal"],"name":"dashboard@internal","provider":"internal"},{"status":"enabled","name":"noop@internal","provider":"internal"},{"loadBalancer":{"servers":[{"url":"http://172.18.0.7:8000"},{"url":"http://172.18.0.6:8000"},{"url":"http://172.18.0.5:8000"},{"url":"http://172.18.0.8:8000"},{"url":"http://172.18.0.4:8000"}],"strategy":"wrr","passHostHeader":true,"responseForwarding":{"flushInterval":"100ms"}},"status":"enabled","usedBy":["web@docker"],"name":"web@docker","provider":"docker","type":"loadbalancer","serverStatus":{"http://172.18.0.4:8000":"UP","http://172.18.0.5:8000":"UP","http://172.18.0.6:8000":"UP","http://172.18.0.7:8000":"UP","http://172.18.0.8:8000":"UP"}}]
+

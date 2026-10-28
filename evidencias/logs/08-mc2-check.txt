@@ -1,0 +1,5 @@
+$ docker build --check .
+#9 transferring context: 195B done
+#9 DONE 0.1s
+Check complete, no warnings found.
+

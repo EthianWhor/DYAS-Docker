@@ -1,0 +1,9 @@
+$ curl -s http://localhost:4000/
+<h3>Hola World!</h3><b>Hostname:</b> 6afcdedd22b9<br/><b>Visits:</b> <i>cannot connect to Redis, counter disabled</i>
+$ docker ps --filter name=fh-paso3
+CONTAINER ID   IMAGE           COMMAND                  CREATED          STATUS                    PORTS                                         NAMES
+6afcdedd22b9   friendlyhello   "gunicorn --bind 0.0…"   14 seconds ago   Up 12 seconds (healthy)   0.0.0.0:4000->8000/tcp, [::]:4000->8000/tcp   fh-paso3
+
+$ docker exec fh-paso3 id
+uid=999(app) gid=999(app) groups=999(app)
+

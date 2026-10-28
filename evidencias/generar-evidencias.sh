@@ -82,12 +82,13 @@ registrar 05-compose.txt docker compose down
 paso "Paso 6: 5 réplicas detrás de Traefik"
 registrar 06-traefik.txt docker compose -f docker-compose.traefik.yaml up -d --build --scale web=5 --wait
 sleep 5
+# La respuesta no termina en salto de línea: se agrega uno para que cada petición quede en su línea
 for _ in $(seq 1 15); do
-  curl -s http://localhost:4000/ | sed -n 's/.*Hostname:<\/b> \([^<]*\)<br\/>.*Visits:<\/b> \(.*\)$/hostname=\1  visits=\2/p'
+  { curl -s http://localhost:4000/; echo; } | sed -n 's/.*Hostname:<\/b> \([^<]*\)<br\/>.*Visits:<\/b> \(.*\)$/hostname=\1  visits=\2/p'
 done | tee -a "$logs/06-traefik.txt"
 printf '\nHostnames distintos:\n' | tee -a "$logs/06-traefik.txt"
 for _ in $(seq 1 30); do
-  curl -s http://localhost:4000/ | sed -n 's/.*Hostname:<\/b> \([^<]*\)<br\/>.*/\1/p'
+  { curl -s http://localhost:4000/; echo; } | sed -n 's/.*Hostname:<\/b> \([^<]*\)<br\/>.*/\1/p'
 done | sort -u | tee -a "$logs/06-traefik.txt"
 registrar 06-traefik.txt docker compose -f docker-compose.traefik.yaml ps
 registrar 06-traefik.txt docker ps --filter label=com.docker.compose.service=web

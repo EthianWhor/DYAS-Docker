@@ -1,0 +1,106 @@
+$ docker compose up -d --build --wait
+ Image friendlyhello-web Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 593B 0.1s done
+#1 DONE 0.1s
+
+#2 [internal] load build definition from Dockerfile
+#2 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 1.01kB done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.14-slim
+#3 DONE 0.4s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 134B 0.0s done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 DONE 0.0s
+
+#6 [1/6] FROM docker.io/library/python:3.14-slim@sha256:82abc9f53600280b0757126f83c5a7d47088592d2acb6b4c0b9e97f76865508c
+#6 resolve docker.io/library/python:3.14-slim@sha256:82abc9f53600280b0757126f83c5a7d47088592d2acb6b4c0b9e97f76865508c 0.1s done
+#6 DONE 0.1s
+
+#5 [internal] load build context
+#5 transferring context: 63B done
+#5 DONE 0.0s
+
+#7 [4/6] RUN pip install --no-cache-dir -r requirements.txt
+#7 CACHED
+
+#8 [2/6] WORKDIR /app
+#8 CACHED
+
+#9 [3/6] COPY requirements.txt .
+#9 CACHED
+
+#10 [5/6] COPY . .
+#10 CACHED
+
+#11 [6/6] RUN useradd --system --no-create-home app
+#11 CACHED
+
+#12 exporting to image
+#12 exporting layers done
+#12 exporting manifest sha256:714c2de49e39662ae6e871662eb2c5fd48c05978c176235fa81fbfc46871983a done
+#12 exporting config sha256:b3fcde899fd3b7097a5d2f036181afce6e0e27ec45c65c8bb0085aed8836d853 done
+#12 exporting attestation manifest sha256:a1f1863b1a1c30a7c4bd87c0c4943090cf2e727909f45d44e30b6cf79ff96be1
+#12 exporting attestation manifest sha256:a1f1863b1a1c30a7c4bd87c0c4943090cf2e727909f45d44e30b6cf79ff96be1 0.0s done
+#12 exporting manifest list sha256:cf095234d43f1e519b117bea7df11184defbe49f9dde6f83025fb55ce97abbd0 0.0s done
+#12 naming to docker.io/library/friendlyhello-web:latest done
+#12 unpacking to docker.io/library/friendlyhello-web:latest 0.0s done
+#12 DONE 0.2s
+
+#13 resolving provenance for metadata file
+#13 DONE 0.0s
+ Image friendlyhello-web Built 
+ Network friendlyhello_default Creating 
+ Network friendlyhello_default Creating 
+ Network friendlyhello_default Created 
+ Network friendlyhello_default Created 
+ Container friendlyhello-redis-1 Creating 
+ Container friendlyhello-redis-1 Created 
+ Container friendlyhello-web-1 Creating 
+ Container friendlyhello-web-1 Created 
+ Container friendlyhello-redis-1 Starting 
+ Container friendlyhello-redis-1 Started 
+ Container friendlyhello-redis-1 Waiting 
+ Container friendlyhello-redis-1 Healthy 
+ Container friendlyhello-web-1 Starting 
+ Container friendlyhello-web-1 Started 
+ Container friendlyhello-web-1 Waiting 
+ Container friendlyhello-redis-1 Waiting 
+ Container friendlyhello-redis-1 Healthy 
+ Container friendlyhello-web-1 Healthy 
+
+$ curl -s http://localhost:4000/
+<h3>Hola World!</h3><b>Hostname:</b> 0c23fd585162<br/><b>Visits:</b> 51
+$ curl -s http://localhost:4000/
+<h3>Hola World!</h3><b>Hostname:</b> 0c23fd585162<br/><b>Visits:</b> 52
+$ curl -s http://localhost:4000/
+<h3>Hola World!</h3><b>Hostname:</b> 0c23fd585162<br/><b>Visits:</b> 53
+$ curl -s http://localhost:4000/
+<h3>Hola World!</h3><b>Hostname:</b> 0c23fd585162<br/><b>Visits:</b> 54
+$ curl -s http://localhost:4000/
+<h3>Hola World!</h3><b>Hostname:</b> 0c23fd585162<br/><b>Visits:</b> 55
+$ docker compose ps
+NAME                    IMAGE               COMMAND                  SERVICE   CREATED          STATUS                    PORTS
+friendlyhello-redis-1   redis:8.8           "docker-entrypoint.s…"   redis     11 seconds ago   Up 10 seconds (healthy)   6379/tcp
+friendlyhello-web-1     friendlyhello-web   "gunicorn --bind 0.0…"   web       11 seconds ago   Up 4 seconds (healthy)    0.0.0.0:4000->8000/tcp, [::]:4000->8000/tcp
+
+$ docker compose down
+ Container friendlyhello-web-1 Stopping 
+ Container friendlyhello-web-1 Stopped 
+ Container friendlyhello-web-1 Removing 
+ Container friendlyhello-web-1 Removed 
+ Container friendlyhello-redis-1 Stopping 
+ Container friendlyhello-redis-1 Stopped 
+ Container friendlyhello-redis-1 Removing 
+ Container friendlyhello-redis-1 Removed 
+ Network friendlyhello_default Removing 
+ Network friendlyhello_default Removed 
+

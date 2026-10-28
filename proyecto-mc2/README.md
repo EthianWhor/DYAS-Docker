@@ -52,10 +52,11 @@ docker run --rm --entrypoint id mc2:dev             # uid=...(app): no corre com
 docker run --rm --entrypoint java mc2:dev -version  # solo JRE 17, sin Maven
 ```
 
-## Verificación hecha sin Docker
+## Resultado
 
-En un equipo sin Docker se reprodujo la etapa de compilación con los mismos comandos y un directorio
-que solo tenía `pom.xml` y `src/` (lo que deja pasar el `.dockerignore`): `dependency:go-offline` y
-`package -Dmaven.test.skip=true` terminan bien y generan los dos `.jar`. Después, el `.jar` corrió
-en modo consola con `-Dmc2.worlds.dir`, creó un mundo y lo guardó como JSON en ese directorio.
-La construcción real con `docker build` está pendiente de ejecutar.
+- `docker build --check .`: sin advertencias.
+- Imagen final `mc2:dev`: 406 MB en disco (110 MB comprimida), JRE 17 sin Maven ni `javac`, usuario
+  `app` (`uid=999`).
+- Un mundo creado desde el menú de consola sigue disponible en un contenedor nuevo gracias al volumen.
+
+Las salidas completas están en `evidencias/logs/08-mc2-*.txt` y las capturas en el Wiki.

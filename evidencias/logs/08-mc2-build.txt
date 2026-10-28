@@ -1,0 +1,212 @@
+$ docker build --progress=plain -t mc2:dev .
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.92kB done
+#1 DONE 0.0s
+
+#2 resolve image config for docker-image://docker.io/docker/dockerfile:1
+#2 DONE 0.3s
+
+#3 docker-image://docker.io/docker/dockerfile:1@sha256:4edf897a3ffa55b89f906fc8cc78afdb3f1834cc9c7083565e611a8a7d5fe99e
+#3 resolve docker.io/docker/dockerfile:1@sha256:4edf897a3ffa55b89f906fc8cc78afdb3f1834cc9c7083565e611a8a7d5fe99e 0.1s done
+#3 CACHED
+
+#4 [internal] load metadata for docker.io/library/eclipse-temurin:17.0.20.1_1-jre-noble
+#4 DONE 0.2s
+
+#5 [internal] load metadata for docker.io/library/maven:3.9.16-eclipse-temurin-17-noble
+#5 DONE 0.2s
+
+#6 [internal] load .dockerignore
+#6 transferring context: 195B done
+#6 DONE 0.0s
+
+#7 [build 1/6] FROM docker.io/library/maven:3.9.16-eclipse-temurin-17-noble@sha256:1a352420f7aba21f5ad08df31bab55f74c013fb491f1ae8ab1dd7ff9ed698584
+#7 resolve docker.io/library/maven:3.9.16-eclipse-temurin-17-noble@sha256:1a352420f7aba21f5ad08df31bab55f74c013fb491f1ae8ab1dd7ff9ed698584 0.1s done
+#7 ...
+
+#8 [internal] load build context
+#8 transferring context: 2.97MB 0.3s done
+#8 DONE 0.7s
+
+#9 [stage-1 1/4] FROM docker.io/library/eclipse-temurin:17.0.20.1_1-jre-noble@sha256:b3e1d0486f09293b2455aed02d396d4b6b5ea9b0e8c7c065c297cfef453b0116
+#9 resolve docker.io/library/eclipse-temurin:17.0.20.1_1-jre-noble@sha256:b3e1d0486f09293b2455aed02d396d4b6b5ea9b0e8c7c065c297cfef453b0116 0.1s done
+#9 sha256:0b202c9ee96185727fadf301cdc7e3f9442d9a3f8f2f272758cf2d99de9ac92d 0B / 2.46kB 0.2s
+#9 sha256:0b202c9ee96185727fadf301cdc7e3f9442d9a3f8f2f272758cf2d99de9ac92d 2.46kB / 2.46kB 0.3s
+#9 sha256:1d5663303513e5483da76b9eaeb6b71cc8180a7301c6d2ad0d1d62d08e12ee4a 0B / 158B 0.2s
+#9 sha256:5fedfbed43925c99200d32eb3989d3d37dad51cadb1ece322f87eef12e5b5e04 0B / 47.52MB 0.2s
+#9 sha256:dea1a4d2561f2a08419446f783704070ae5616a36934d0fe32a2ea208800b0d1 0B / 16.97MB 0.2s
+#9 sha256:0b202c9ee96185727fadf301cdc7e3f9442d9a3f8f2f272758cf2d99de9ac92d 2.46kB / 2.46kB 0.3s done
+#9 sha256:1d5663303513e5483da76b9eaeb6b71cc8180a7301c6d2ad0d1d62d08e12ee4a 158B / 158B 0.4s done
+#9 sha256:7a48b8f0e5c73d0cc2a85b008978396aa19d253dc1b96fdb0b769ee6dcbeca4a 0B / 29.77MB 0.2s
+#9 sha256:7a48b8f0e5c73d0cc2a85b008978396aa19d253dc1b96fdb0b769ee6dcbeca4a 2.10MB / 29.77MB 0.5s
+#9 sha256:7a48b8f0e5c73d0cc2a85b008978396aa19d253dc1b96fdb0b769ee6dcbeca4a 4.19MB / 29.77MB 0.8s
+#9 sha256:dea1a4d2561f2a08419446f783704070ae5616a36934d0fe32a2ea208800b0d1 1.05MB / 16.97MB 1.2s
+#9 sha256:7a48b8f0e5c73d0cc2a85b008978396aa19d253dc1b96fdb0b769ee6dcbeca4a 6.29MB / 29.77MB 1.1s
+#9 sha256:dea1a4d2561f2a08419446f783704070ae5616a36934d0fe32a2ea208800b0d1 2.10MB / 16.97MB 1.8s
+#9 sha256:7a48b8f0e5c73d0cc2a85b008978396aa19d253dc1b96fdb0b769ee6dcbeca4a 8.39MB / 29.77MB 1.5s
+#9 sha256:dea1a4d2561f2a08419446f783704070ae5616a36934d0fe32a2ea208800b0d1 3.15MB / 16.97MB 2.3s
+#9 sha256:7a48b8f0e5c73d0cc2a85b008978396aa19d253dc1b96fdb0b769ee6dcbeca4a 10.49MB / 29.77MB 2.1s
+#9 sha256:dea1a4d2561f2a08419446f783704070ae5616a36934d0fe32a2ea208800b0d1 4.19MB / 16.97MB 2.6s
+#9 sha256:7a48b8f0e5c73d0cc2a85b008978396aa19d253dc1b96fdb0b769ee6dcbeca4a 12.58MB / 29.77MB 2.4s
+#9 sha256:5fedfbed43925c99200d32eb3989d3d37dad51cadb1ece322f87eef12e5b5e04 3.15MB / 47.52MB 3.0s
+#9 sha256:dea1a4d2561f2a08419446f783704070ae5616a36934d0fe32a2ea208800b0d1 5.24MB / 16.97MB 3.0s
+#9 sha256:7a48b8f0e5c73d0cc2a85b008978396aa19d253dc1b96fdb0b769ee6dcbeca4a 14.68MB / 29.77MB 2.9s
+#9 sha256:dea1a4d2561f2a08419446f783704070ae5616a36934d0fe32a2ea208800b0d1 6.29MB / 16.97MB 3.5s
+#9 sha256:7a48b8f0e5c73d0cc2a85b008978396aa19d253dc1b96fdb0b769ee6dcbeca4a 16.78MB / 29.77MB 3.2s
+#9 sha256:dea1a4d2561f2a08419446f783704070ae5616a36934d0fe32a2ea208800b0d1 7.34MB / 16.97MB 3.8s
+#9 sha256:7a48b8f0e5c73d0cc2a85b008978396aa19d253dc1b96fdb0b769ee6dcbeca4a 18.87MB / 29.77MB 3.6s
+#9 sha256:dea1a4d2561f2a08419446f783704070ae5616a36934d0fe32a2ea208800b0d1 8.39MB / 16.97MB 4.2s
+#9 sha256:7a48b8f0e5c73d0cc2a85b008978396aa19d253dc1b96fdb0b769ee6dcbeca4a 20.97MB / 29.77MB 4.1s
+#9 sha256:dea1a4d2561f2a08419446f783704070ae5616a36934d0fe32a2ea208800b0d1 9.44MB / 16.97MB 4.5s
+#9 sha256:7a48b8f0e5c73d0cc2a85b008978396aa19d253dc1b96fdb0b769ee6dcbeca4a 23.07MB / 29.77MB 4.4s
+#9 sha256:5fedfbed43925c99200d32eb3989d3d37dad51cadb1ece322f87eef12e5b5e04 6.29MB / 47.52MB 5.0s
+#9 sha256:dea1a4d2561f2a08419446f783704070ae5616a36934d0fe32a2ea208800b0d1 10.49MB / 16.97MB 4.8s
+#9 sha256:7a48b8f0e5c73d0cc2a85b008978396aa19d253dc1b96fdb0b769ee6dcbeca4a 25.17MB / 29.77MB 4.7s
+#9 sha256:dea1a4d2561f2a08419446f783704070ae5616a36934d0fe32a2ea208800b0d1 11.53MB / 16.97MB 5.3s
+#9 sha256:7a48b8f0e5c73d0cc2a85b008978396aa19d253dc1b96fdb0b769ee6dcbeca4a 27.26MB / 29.77MB 5.1s
+#9 sha256:dea1a4d2561f2a08419446f783704070ae5616a36934d0fe32a2ea208800b0d1 12.58MB / 16.97MB 5.6s
+#9 sha256:dea1a4d2561f2a08419446f783704070ae5616a36934d0fe32a2ea208800b0d1 13.63MB / 16.97MB 5.9s
+#9 sha256:7a48b8f0e5c73d0cc2a85b008978396aa19d253dc1b96fdb0b769ee6dcbeca4a 29.77MB / 29.77MB 5.6s
+#9 sha256:dea1a4d2561f2a08419446f783704070ae5616a36934d0fe32a2ea208800b0d1 14.68MB / 16.97MB 6.2s
+#9 sha256:7a48b8f0e5c73d0cc2a85b008978396aa19d253dc1b96fdb0b769ee6dcbeca4a 29.77MB / 29.77MB 5.9s done
+#9 sha256:dea1a4d2561f2a08419446f783704070ae5616a36934d0fe32a2ea208800b0d1 15.73MB / 16.97MB 6.3s
+#9 extracting sha256:7a48b8f0e5c73d0cc2a85b008978396aa19d253dc1b96fdb0b769ee6dcbeca4a
+#9 sha256:5fedfbed43925c99200d32eb3989d3d37dad51cadb1ece322f87eef12e5b5e04 9.44MB / 47.52MB 6.6s
+#9 sha256:dea1a4d2561f2a08419446f783704070ae5616a36934d0fe32a2ea208800b0d1 16.97MB / 16.97MB 6.5s
+#9 sha256:dea1a4d2561f2a08419446f783704070ae5616a36934d0fe32a2ea208800b0d1 16.97MB / 16.97MB 6.8s done
+#9 sha256:5fedfbed43925c99200d32eb3989d3d37dad51cadb1ece322f87eef12e5b5e04 12.58MB / 47.52MB 7.4s
+#9 sha256:5fedfbed43925c99200d32eb3989d3d37dad51cadb1ece322f87eef12e5b5e04 15.73MB / 47.52MB 8.7s
+#9 extracting sha256:7a48b8f0e5c73d0cc2a85b008978396aa19d253dc1b96fdb0b769ee6dcbeca4a 3.0s done
+#9 extracting sha256:dea1a4d2561f2a08419446f783704070ae5616a36934d0fe32a2ea208800b0d1
+#9 ...
+
+#7 [build 1/6] FROM docker.io/library/maven:3.9.16-eclipse-temurin-17-noble@sha256:1a352420f7aba21f5ad08df31bab55f74c013fb491f1ae8ab1dd7ff9ed698584
+#7 sha256:4fe30289cca7ad88561d2fd5028f587b6089f314c9ef89c81166202dbd18ed26 154B / 154B 0.2s done
+#7 sha256:021db8d0ef42ba2ac0d1304afe6b7ebcc7a91b31c61d21c849976c83a4af3935 355B / 355B 0.2s done
+#7 sha256:b2a6841fdc6cbd085097deb1d9c720069dbacee84cf1687213de59da32ae5805 9.36MB / 9.36MB 3.5s done
+#7 sha256:67f774a47cb5f1b0e174ed3c41b21e8cb9df75ccf312e886bb784ab409447775 849B / 849B 0.2s done
+#7 sha256:0d6621ed68d388094866adb9ba01b741a60d2bb48ebf618655da32db30bc613f 16.78MB / 24.96MB 5.6s
+#7 sha256:528b48a07f784fe320d419ad522c6ea0b720de09023f17b205ceb39b82259996 2.46kB / 2.46kB 0.5s done
+#7 sha256:dd1380fd83f09a4e55ae12e3e7ad45b77ab8bd2670e34e271f271a3533200b34 158B / 158B 0.2s done
+#7 sha256:0187a0cde513bac1578240fe660c2923c2c5eab87249c03ac120b45580519ee9 2.10MB / 145.83MB 3.3s
+#7 sha256:6ed9971a62fa977a56b299303af6d9bd1a25e1c68c7eec80c15b38deb612c755 22.95MB / 22.95MB 3.2s
+#7 ...
+
+#9 [stage-1 1/4] FROM docker.io/library/eclipse-temurin:17.0.20.1_1-jre-noble@sha256:b3e1d0486f09293b2455aed02d396d4b6b5ea9b0e8c7c065c297cfef453b0116
+#9 extracting sha256:dea1a4d2561f2a08419446f783704070ae5616a36934d0fe32a2ea208800b0d1 1.5s done
+#9 sha256:5fedfbed43925c99200d32eb3989d3d37dad51cadb1ece322f87eef12e5b5e04 18.87MB / 47.52MB 11.4s
+#9 sha256:5fedfbed43925c99200d32eb3989d3d37dad51cadb1ece322f87eef12e5b5e04 22.02MB / 47.52MB 15.3s
+#9 sha256:5fedfbed43925c99200d32eb3989d3d37dad51cadb1ece322f87eef12e5b5e04 25.17MB / 47.52MB 16.3s
+#9 ...
+
+#7 [build 1/6] FROM docker.io/library/maven:3.9.16-eclipse-temurin-17-noble@sha256:1a352420f7aba21f5ad08df31bab55f74c013fb491f1ae8ab1dd7ff9ed698584
+#7 sha256:0d6621ed68d388094866adb9ba01b741a60d2bb48ebf618655da32db30bc613f 24.96MB / 24.96MB 10.7s done
+#7 sha256:0187a0cde513bac1578240fe660c2923c2c5eab87249c03ac120b45580519ee9 18.87MB / 145.83MB 10.8s
+#7 sha256:6ed9971a62fa977a56b299303af6d9bd1a25e1c68c7eec80c15b38deb612c755 22.95MB / 22.95MB 3.4s done
+#7 sha256:edd1ed89f0d443580bd42e5a10cd8736aba5a3438b2a0645c2ebb50119bb0eba 29.76MB / 29.76MB 3.8s done
+#7 extracting sha256:edd1ed89f0d443580bd42e5a10cd8736aba5a3438b2a0645c2ebb50119bb0eba 2.8s done
+#7 extracting sha256:6ed9971a62fa977a56b299303af6d9bd1a25e1c68c7eec80c15b38deb612c755
+#7 extracting sha256:6ed9971a62fa977a56b299303af6d9bd1a25e1c68c7eec80c15b38deb612c755 1.6s done
+#7 sha256:0187a0cde513bac1578240fe660c2923c2c5eab87249c03ac120b45580519ee9 26.21MB / 145.83MB 13.0s
+#7 sha256:0187a0cde513bac1578240fe660c2923c2c5eab87249c03ac120b45580519ee9 33.55MB / 145.83MB 14.7s
+#7 sha256:0187a0cde513bac1578240fe660c2923c2c5eab87249c03ac120b45580519ee9 40.89MB / 145.83MB 15.6s
+#7 sha256:0187a0cde513bac1578240fe660c2923c2c5eab87249c03ac120b45580519ee9 49.28MB / 145.83MB 16.4s
+#7 sha256:0187a0cde513bac1578240fe660c2923c2c5eab87249c03ac120b45580519ee9 56.62MB / 145.83MB 17.1s
+#7 sha256:0187a0cde513bac1578240fe660c2923c2c5eab87249c03ac120b45580519ee9 63.96MB / 145.83MB 17.7s
+#7 sha256:0187a0cde513bac1578240fe660c2923c2c5eab87249c03ac120b45580519ee9 71.30MB / 145.83MB 18.5s
+#7 ...
+
+#9 [stage-1 1/4] FROM docker.io/library/eclipse-temurin:17.0.20.1_1-jre-noble@sha256:b3e1d0486f09293b2455aed02d396d4b6b5ea9b0e8c7c065c297cfef453b0116
+#9 sha256:5fedfbed43925c99200d32eb3989d3d37dad51cadb1ece322f87eef12e5b5e04 47.52MB / 47.52MB 23.0s done
+#9 extracting sha256:5fedfbed43925c99200d32eb3989d3d37dad51cadb1ece322f87eef12e5b5e04 2.7s done
+#9 DONE 26.6s
+
+#9 [stage-1 1/4] FROM docker.io/library/eclipse-temurin:17.0.20.1_1-jre-noble@sha256:b3e1d0486f09293b2455aed02d396d4b6b5ea9b0e8c7c065c297cfef453b0116
+#9 extracting sha256:1d5663303513e5483da76b9eaeb6b71cc8180a7301c6d2ad0d1d62d08e12ee4a 0.1s done
+#9 extracting sha256:0b202c9ee96185727fadf301cdc7e3f9442d9a3f8f2f272758cf2d99de9ac92d 0.1s done
+#9 DONE 26.7s
+
+#7 [build 1/6] FROM docker.io/library/maven:3.9.16-eclipse-temurin-17-noble@sha256:1a352420f7aba21f5ad08df31bab55f74c013fb491f1ae8ab1dd7ff9ed698584
+#7 sha256:0187a0cde513bac1578240fe660c2923c2c5eab87249c03ac120b45580519ee9 79.69MB / 145.83MB 19.0s
+#7 sha256:0187a0cde513bac1578240fe660c2923c2c5eab87249c03ac120b45580519ee9 87.03MB / 145.83MB 19.6s
+#7 sha256:0187a0cde513bac1578240fe660c2923c2c5eab87249c03ac120b45580519ee9 95.42MB / 145.83MB 20.5s
+#7 sha256:0187a0cde513bac1578240fe660c2923c2c5eab87249c03ac120b45580519ee9 103.81MB / 145.83MB 21.2s
+#7 sha256:0187a0cde513bac1578240fe660c2923c2c5eab87249c03ac120b45580519ee9 112.20MB / 145.83MB 21.7s
+#7 sha256:0187a0cde513bac1578240fe660c2923c2c5eab87249c03ac120b45580519ee9 119.54MB / 145.83MB 22.3s
+#7 sha256:0187a0cde513bac1578240fe660c2923c2c5eab87249c03ac120b45580519ee9 126.88MB / 145.83MB 22.8s
+#7 sha256:0187a0cde513bac1578240fe660c2923c2c5eab87249c03ac120b45580519ee9 135.27MB / 145.83MB 23.4s
+#7 sha256:0187a0cde513bac1578240fe660c2923c2c5eab87249c03ac120b45580519ee9 142.61MB / 145.83MB 24.1s
+#7 ...
+
+#10 [stage-1 2/4] RUN groupadd --system app && useradd --system --gid app --no-create-home app  && mkdir -p /data/worlds && chown -R app:app /data
+#10 DONE 5.6s
+
+#7 [build 1/6] FROM docker.io/library/maven:3.9.16-eclipse-temurin-17-noble@sha256:1a352420f7aba21f5ad08df31bab55f74c013fb491f1ae8ab1dd7ff9ed698584
+#7 ...
+
+#11 [stage-1 3/4] WORKDIR /app
+#11 DONE 1.3s
+
+#7 [build 1/6] FROM docker.io/library/maven:3.9.16-eclipse-temurin-17-noble@sha256:1a352420f7aba21f5ad08df31bab55f74c013fb491f1ae8ab1dd7ff9ed698584
+#7 sha256:0187a0cde513bac1578240fe660c2923c2c5eab87249c03ac120b45580519ee9 145.83MB / 145.83MB 25.5s done
+#7 extracting sha256:0187a0cde513bac1578240fe660c2923c2c5eab87249c03ac120b45580519ee9
+#7 extracting sha256:0187a0cde513bac1578240fe660c2923c2c5eab87249c03ac120b45580519ee9 3.4s done
+#7 DONE 37.0s
+
+#7 [build 1/6] FROM docker.io/library/maven:3.9.16-eclipse-temurin-17-noble@sha256:1a352420f7aba21f5ad08df31bab55f74c013fb491f1ae8ab1dd7ff9ed698584
+#7 extracting sha256:dd1380fd83f09a4e55ae12e3e7ad45b77ab8bd2670e34e271f271a3533200b34 0.1s done
+#7 extracting sha256:528b48a07f784fe320d419ad522c6ea0b720de09023f17b205ceb39b82259996 0.1s done
+#7 DONE 37.1s
+
+#7 [build 1/6] FROM docker.io/library/maven:3.9.16-eclipse-temurin-17-noble@sha256:1a352420f7aba21f5ad08df31bab55f74c013fb491f1ae8ab1dd7ff9ed698584
+#7 extracting sha256:0d6621ed68d388094866adb9ba01b741a60d2bb48ebf618655da32db30bc613f
+#7 extracting sha256:0d6621ed68d388094866adb9ba01b741a60d2bb48ebf618655da32db30bc613f 1.5s done
+#7 DONE 38.6s
+
+#7 [build 1/6] FROM docker.io/library/maven:3.9.16-eclipse-temurin-17-noble@sha256:1a352420f7aba21f5ad08df31bab55f74c013fb491f1ae8ab1dd7ff9ed698584
+#7 extracting sha256:b2a6841fdc6cbd085097deb1d9c720069dbacee84cf1687213de59da32ae5805
+#7 extracting sha256:b2a6841fdc6cbd085097deb1d9c720069dbacee84cf1687213de59da32ae5805 0.2s done
+#7 DONE 38.7s
+
+#7 [build 1/6] FROM docker.io/library/maven:3.9.16-eclipse-temurin-17-noble@sha256:1a352420f7aba21f5ad08df31bab55f74c013fb491f1ae8ab1dd7ff9ed698584
+#7 extracting sha256:67f774a47cb5f1b0e174ed3c41b21e8cb9df75ccf312e886bb784ab409447775 0.1s done
+#7 extracting sha256:021db8d0ef42ba2ac0d1304afe6b7ebcc7a91b31c61d21c849976c83a4af3935 0.0s done
+#7 DONE 38.8s
+
+#7 [build 1/6] FROM docker.io/library/maven:3.9.16-eclipse-temurin-17-noble@sha256:1a352420f7aba21f5ad08df31bab55f74c013fb491f1ae8ab1dd7ff9ed698584
+#7 extracting sha256:4fe30289cca7ad88561d2fd5028f587b6089f314c9ef89c81166202dbd18ed26 0.1s done
+#7 DONE 38.9s
+
+#12 [build 2/6] WORKDIR /src
+#12 DONE 6.0s
+
+#13 [build 3/6] COPY pom.xml .
+#13 DONE 0.2s
+
+#14 [build 4/6] RUN --mount=type=cache,target=/root/.m2 mvn -B -ntp -q dependency:go-offline
+#14 DONE 68.7s
+
+#15 [build 5/6] COPY src ./src
+#15 DONE 0.2s
+
+#16 [build 6/6] RUN --mount=type=cache,target=/root/.m2 mvn -B -ntp -q package -Dmaven.test.skip=true  && cp target/minecraft2-0.1.0-SNAPSHOT.jar /app.jar
+#16 DONE 14.9s
+
+#17 [stage-1 4/4] COPY --from=build --chown=app:app /app.jar app.jar
+#17 DONE 0.5s
+
+#18 exporting to image
+#18 exporting layers
+#18 exporting layers 1.5s done
+#18 exporting manifest sha256:b2995042e3fdd6bd77362e22b6427c551aff697cc9d8a7746d5dcfb537cbb7b1 0.1s done
+#18 exporting config sha256:059a364b73f80ecf5e40a2e090ece5cc0ebe03f75857cfe9bd32db412937b39a 0.1s done
+#18 exporting attestation manifest sha256:4797023b1e9ffdf7d0d1954a3531693fb58479ca57f6a5d2124a07f6fe67a2e1 0.1s done
+#18 exporting manifest list sha256:1ec9e868652b41954259554d515919a89544c85e916270378648fa5482363e23
+#18 exporting manifest list sha256:1ec9e868652b41954259554d515919a89544c85e916270378648fa5482363e23 0.1s done
+#18 naming to docker.io/library/mc2:dev done
+#18 unpacking to docker.io/library/mc2:dev
+#18 unpacking to docker.io/library/mc2:dev 4.7s done
+#18 DONE 6.6s
+Tiempo total: 138 s

@@ -1,0 +1,83 @@
+$ docker build --progress=plain -f Dockerfile.orden-invertido -t friendlyhello:orden-invertido .
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.orden-invertido
+#1 transferring dockerfile: 794B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.14-slim
+#2 DONE 0.3s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 134B done
+#3 DONE 0.1s
+
+#4 [internal] load build context
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.14-slim@sha256:82abc9f53600280b0757126f83c5a7d47088592d2acb6b4c0b9e97f76865508c
+#5 resolve docker.io/library/python:3.14-slim@sha256:82abc9f53600280b0757126f83c5a7d47088592d2acb6b4c0b9e97f76865508c 0.1s done
+#5 DONE 0.1s
+
+#4 [internal] load build context
+#4 transferring context: 1.21kB done
+#4 DONE 0.0s
+
+#6 [2/5] WORKDIR /app
+#6 CACHED
+
+#7 [3/5] COPY . .
+#7 DONE 0.3s
+
+#8 [4/5] RUN pip install --no-cache-dir -r requirements.txt
+#8 3.266 Collecting Flask==3.1.3 (from -r requirements.txt (line 1))
+#8 3.765   Downloading flask-3.1.3-py3-none-any.whl.metadata (3.2 kB)
+#8 3.981 Collecting redis==8.1.0 (from -r requirements.txt (line 2))
+#8 4.136   Downloading redis-8.1.0-py3-none-any.whl.metadata (16 kB)
+#8 4.327 Collecting gunicorn==26.2.0 (from -r requirements.txt (line 3))
+#8 4.481   Downloading gunicorn-26.2.0-py3-none-any.whl.metadata (5.5 kB)
+#8 4.624 Collecting blinker>=1.9.0 (from Flask==3.1.3->-r requirements.txt (line 1))
+#8 4.777   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+#8 4.931 Collecting click>=8.1.3 (from Flask==3.1.3->-r requirements.txt (line 1))
+#8 5.085   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+#8 5.227 Collecting itsdangerous>=2.2.0 (from Flask==3.1.3->-r requirements.txt (line 1))
+#8 5.383   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+#8 5.541 Collecting jinja2>=3.1.2 (from Flask==3.1.3->-r requirements.txt (line 1))
+#8 5.701   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#8 6.062 Collecting markupsafe>=2.1.1 (from Flask==3.1.3->-r requirements.txt (line 1))
+#8 6.219   Downloading markupsafe-3.0.4-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#8 6.376 Collecting werkzeug>=3.1.0 (from Flask==3.1.3->-r requirements.txt (line 1))
+#8 6.532   Downloading werkzeug-3.1.9-py3-none-any.whl.metadata (4.1 kB)
+#8 6.699 Downloading flask-3.1.3-py3-none-any.whl (103 kB)
+#8 7.073 Downloading redis-8.1.0-py3-none-any.whl (560 kB)
+#8 7.417    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 560.6/560.6 kB 2.1 MB/s  0:00:00
+#8 7.572 Downloading gunicorn-26.2.0-py3-none-any.whl (228 kB)
+#8 7.754 Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+#8 7.924 Downloading click-8.5.0-py3-none-any.whl (125 kB)
+#8 8.099 Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+#8 8.254 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#8 8.430 Downloading markupsafe-3.0.4-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (23 kB)
+#8 8.606 Downloading werkzeug-3.1.9-py3-none-any.whl (228 kB)
+#8 8.877 Installing collected packages: redis, markupsafe, itsdangerous, gunicorn, click, blinker, werkzeug, jinja2, Flask
+#8 11.37 
+#8 11.37 Successfully installed Flask-3.1.3 blinker-1.9.0 click-8.5.0 gunicorn-26.2.0 itsdangerous-2.2.0 jinja2-3.1.6 markupsafe-3.0.4 redis-8.1.0 werkzeug-3.1.9
+#8 11.37 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#8 DONE 11.8s
+
+#9 [5/5] RUN useradd --system --no-create-home app
+#9 DONE 0.5s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 1.7s done
+#10 exporting manifest sha256:171b4a83f28417f6e78e99cbf6332d620132b996b0e92e2a67bec11dcbe756a8 0.0s done
+#10 exporting config sha256:32b1c79bc21ec9468ed61d3dfd02d244f4a7b08560e3489eff4e409a0749191d 0.0s done
+#10 exporting attestation manifest sha256:8b43fad4751aa5a1e7f21923ee9923d8f833ee7cfa01e23d09ea9075dab0dde3
+#10 exporting attestation manifest sha256:8b43fad4751aa5a1e7f21923ee9923d8f833ee7cfa01e23d09ea9075dab0dde3 0.0s done
+#10 exporting manifest list sha256:9b85004175bcb13f33f00a45aeb291552a7bf7499cbb551a70d219028509d247 0.0s done
+#10 naming to docker.io/library/friendlyhello:orden-invertido done
+#10 unpacking to docker.io/library/friendlyhello:orden-invertido
+#10 unpacking to docker.io/library/friendlyhello:orden-invertido 0.8s done
+#10 DONE 2.8s
+
+Tiempo total: 17 s

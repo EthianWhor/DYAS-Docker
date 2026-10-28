@@ -1,0 +1,56 @@
+$ docker build -t friendlyhello .
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.01kB 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.14-slim
+#2 DONE 0.4s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 134B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.14-slim@sha256:82abc9f53600280b0757126f83c5a7d47088592d2acb6b4c0b9e97f76865508c
+#5 resolve docker.io/library/python:3.14-slim@sha256:82abc9f53600280b0757126f83c5a7d47088592d2acb6b4c0b9e97f76865508c 0.1s done
+#5 DONE 0.1s
+
+#4 [internal] load build context
+#4 transferring context: 63B done
+#4 DONE 0.0s
+
+#6 [3/6] COPY requirements.txt .
+#6 CACHED
+
+#7 [4/6] RUN pip install --no-cache-dir -r requirements.txt
+#7 CACHED
+
+#8 [5/6] COPY . .
+#8 CACHED
+
+#9 [2/6] WORKDIR /app
+#9 CACHED
+
+#10 [6/6] RUN useradd --system --no-create-home app
+#10 CACHED
+
+#11 exporting to image
+#11 exporting layers done
+#11 exporting manifest sha256:cdce6e8a6353a387510c6c80b4025b1e7d2f47e9102c65cc86930643fb5c0604 done
+#11 exporting config sha256:618c583f3e8e96e0956addc06abf0180a79af3e490fa604cc5b7477ceccbbfaf done
+#11 exporting attestation manifest sha256:c60a8547365d36246892236d6eafc66b6cbf6dfebfe00cfd85326f87d73b4542
+#11 exporting attestation manifest sha256:c60a8547365d36246892236d6eafc66b6cbf6dfebfe00cfd85326f87d73b4542 0.0s done
+#11 exporting manifest list sha256:c40c627ba82e4507d9b4fdf75a797da5858f7c718ec6d29e21f7163f4aa05574 0.0s done
+#11 naming to docker.io/library/friendlyhello:latest 0.0s done
+#11 unpacking to docker.io/library/friendlyhello:latest 0.0s done
+#11 DONE 0.2s
+
+$ docker images friendlyhello
+IMAGE                           ID             DISK USAGE   CONTENT SIZE   EXTRA
+friendlyhello:latest            c40c627ba82e        215MB         51.5MB        
+friendlyhello:orden-invertido   eb723f4c80f0        215MB         51.5MB        
+
