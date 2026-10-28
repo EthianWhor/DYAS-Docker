@@ -7,6 +7,7 @@ Esta carpeta guarda el script que las genera y las salidas completas de los coma
 |---------|-----------|
 | `generar-evidencias.sh` | Ejecuta los Pasos 1 a 6 y guarda la salida de cada comando en `logs/`. |
 | `logs/00` a `logs/06` | Salidas de los Pasos 1 a 6, generadas con el script. |
+| `logs/07-*` | Parte 3: publicación en Docker Hub y ejercicio 1 con la imagen publicada. |
 | `logs/08-mc2-*` | Salidas de la Parte 4 (Minecraft 2): `--check`, construcción, imagen final y ejecución. |
 
 ## Cómo generarlas

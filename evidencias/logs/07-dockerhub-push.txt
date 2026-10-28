@@ -1,0 +1,35 @@
+$ docker build -t ethianwhor/friendlyhello:0.1.0 -t ethianwhor/friendlyhello:latest .
+#12 unpacking to docker.io/ethianwhor/friendlyhello:0.1.0 0.0s done
+#12 naming to docker.io/ethianwhor/friendlyhello:latest 0.0s done
+#12 unpacking to docker.io/ethianwhor/friendlyhello:latest 0.0s done
+#12 DONE 0.7s
+
+$ docker push ethianwhor/friendlyhello:0.1.0
+The push refers to repository [docker.io/ethianwhor/friendlyhello]
+cf01b8c3e5cd: Pushed
+a39baf2ebe08: Pushed
+fbdced56f449: Pushed
+a6c3647b2ba0: Pushed
+25fa238f3e45: Pushed
+b88d9fcd7cc7: Pushed
+f26534771039: Pushed
+44136fa355b3: Pushed
+c8ee86574575: Pushed
+f2be67225471: Pushed
+131e1084e5b2: Pushed
+0.1.0: digest: sha256:627ddda1b2c27760dc3285e32483ac4f01e588f6a23947c2043a48116ef7d881 size: 856
+
+$ docker push ethianwhor/friendlyhello:latest
+The push refers to repository [docker.io/ethianwhor/friendlyhello]
+f2be67225471: Layer already exists
+a39baf2ebe08: Layer already exists
+fbdced56f449: Layer already exists
+44136fa355b3: Already exists
+a6c3647b2ba0: Layer already exists
+f26534771039: Layer already exists
+cf01b8c3e5cd: Layer already exists
+c8ee86574575: Already exists
+b88d9fcd7cc7: Layer already exists
+131e1084e5b2: Layer already exists
+25fa238f3e45: Layer already exists
+latest: digest: sha256:627ddda1b2c27760dc3285e32483ac4f01e588f6a23947c2043a48116ef7d881 size: 856

@@ -1,0 +1,29 @@
+$ docker images ethianwhor/friendlyhello   # sin copia local
+IMAGE   ID             DISK USAGE   CONTENT SIZE   EXTRA
+
+$ DOCKERHUB_USER=ethianwhor docker compose -f docker-compose.hub.yaml up -d --wait
+ Image ethianwhor/friendlyhello:0.1.0 Pulling 
+ Image ethianwhor/friendlyhello:0.1.0 Pulled 
+ Network friendlyhello_default Creating 
+ Network friendlyhello_default Creating 
+ Network friendlyhello_default Created 
+ Network friendlyhello_default Created 
+ Container friendlyhello-redis-1 Creating 
+ Container friendlyhello-redis-1 Created 
+ Container friendlyhello-web-1 Creating 
+ Container friendlyhello-web-1 Created 
+ Container friendlyhello-redis-1 Starting 
+ Container friendlyhello-redis-1 Started 
+ Container friendlyhello-redis-1 Healthy 
+ Container friendlyhello-web-1 Starting 
+ Container friendlyhello-web-1 Started 
+ Container friendlyhello-redis-1 Healthy 
+ Container friendlyhello-web-1 Healthy 
+
+$ DOCKERHUB_USER=ethianwhor docker compose -f docker-compose.hub.yaml ps
+NAME                    IMAGE                            COMMAND                  SERVICE   CREATED          STATUS                   PORTS
+friendlyhello-redis-1   redis:8.8                        "docker-entrypoint.s…"   redis     10 seconds ago   Up 9 seconds (healthy)   6379/tcp
+friendlyhello-web-1     ethianwhor/friendlyhello:0.1.0   "gunicorn --bind 0.0…"   web       10 seconds ago   Up 3 seconds (healthy)   0.0.0.0:4000->8000/tcp, [::]:4000->8000/tcp
+
+$ curl -s http://localhost:4000/
+<h3>Hola World!</h3><b>Hostname:</b> 570393f61175<br/><b>Visits:</b> 106
